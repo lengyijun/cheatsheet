@@ -1,0 +1,1 @@
+sgx_sign dump -enclave enclave.signed.so  -dumpfile <dumpfile>

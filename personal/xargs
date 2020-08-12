@@ -1,0 +1,5 @@
+% 在xargs中使用自己定义的函数
+% 只在bash下适用
+export -f pp
+cat a.txt | xargs -I {} bash -c 'pp "{}" 3 10'
+

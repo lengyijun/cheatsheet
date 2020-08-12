@@ -1,0 +1,3 @@
+# record time output in append mode
+/usr/bin/time -a -o outfile.txt ls
+

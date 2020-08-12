@@ -1,0 +1,2 @@
+# gdb with args
+gdb --args ./a.out arg1 arg2 

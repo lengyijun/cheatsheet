@@ -1,0 +1,14 @@
+---
+tags: [ compression ]
+---
+# To extract an archive:
+unzip <archive>
+
+# To test integrity of archive:
+unzip -tq <archive>
+
+# To list files and directories an archive:
+unzip -l <archive>
+
+# Clean up the garbage an accidental unzipping makes
+unzip -Z -1 <filename.zip> | xargs -I{} rm -v {}

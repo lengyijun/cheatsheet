@@ -1,0 +1,2 @@
+ #为wasm的输出开头加上'0x  尾部加上'
+ VAR=`od  -tx1 /root/rand_game/rand_game.wasm | awk '{$1=""}1'  | tr -d " \n"` ; echo "'0x$VAR'" 

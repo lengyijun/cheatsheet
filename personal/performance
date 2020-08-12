@@ -1,0 +1,66 @@
+# file descriptors
+## system wide
+sar -v #file-nr#  *
+cat /proc/sys/fs/file-max
+cat /proc/sys/fs/file-nr
+
+## per process
+ls /proc/PID/fd | wc -l 
+ulimit -n
+
+--------------------------------------------------------------------------------
+
+# CPU
+## per CPU
+mpstat -P ALL 1   # *
+sar -P ALL        # *
+
+## saturation
+vmstat    #  column r > CPU count
+sar -q    #  runq-sz > CPU count
+dstat     #  better vmstat
+
+-------------------------------------------------------------------------------
+
+# Memory
+free -m
+vmstat 1
+dstat     #  better vmstat
+slabtop -s c
+-------------------------------------------------------------------------------
+
+# Disk
+iostat -xz 1
+df -hT
+swapon -s
+
+# better du
+ncdu                         
+------------------------------------------------------------------------------
+
+# Bandwidth per process
+sudo iftop
+nethogs
+
+-------------------------------------------------------------------------------
+
+# error
+dmesg | grep "Out of memory"
+dmesg | grep killed
+-------------------------------------------------------------------------------
+# other
+
+# Check whether laptop is running on battery or cable
+# 1 = on ac, 0 = on bat
+cat /sys/class/power_supply/AC/online 
+-------------------------------------------------------------------------------
+
+* means you may need to install related software first
+* include these:
+- mpstat
+- sar
+
+* not include these:
+- vmstat
+- dstat     #  better vmstat
+

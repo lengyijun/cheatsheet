@@ -1,0 +1,9 @@
+<script type="text/javascript">
+  var board = document.getElementById("board");
+  var e2 = document.createElement("select");
+  e2.options[0] = new Option("加载项1", "");
+  e2.options[1] = new Option("加载项2", "");
+  e2.size = "2";
+  var object = board.appendChild(e2);
+</script>
+

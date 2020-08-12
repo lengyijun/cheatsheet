@@ -1,0 +1,1 @@
+mpv a.mp4 --video-rotate=90

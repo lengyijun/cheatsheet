@@ -1,0 +1,51 @@
+use rand::Rng;
+let mut rng =rand::thread_rng();
+let j=rng.gen_range(0,N);
+
+
+use std::time::{Duration, SystemTime};
+let sy_time = SystemTime::now();
+println!("{:?}", sy_time.elapsed().unwrap().as_millis() );
+
+//环境变量
+&env::var( "OMP_NUM_THREADS" ).unwrap();
+
+if let Some(ref p) = self.path {}
+          
+//全局变量
+static mut THE_SERIAL_PORT: SerialPort = SerialPort;
+fn main() {
+    let _ = unsafe {
+        THE_SERIAL_PORT.read_speed();
+    };
+}
+
+for ch in 'a'..='z' {
+  print!("{}",ch);
+}
+
+println!("{}", 1); // 默认用法,打印Display
+println!("{:o}", 9); // 八进制
+println!("{:x}", 255); // 十六进制 小写
+println!("{:X}", 255); // 十六进制 大写
+println!("{:p}", &0); // 指针
+println!("{:b}", 15); // 二进制
+println!("{:e}", 10000f32); // 科学计数(小写)
+println!("{:E}", 10000f32); // 科学计数(大写)
+println!("{:?}", "test"); // 打印Debug
+println!("{:#?}", ("test1", "test2")); // 带换行和缩进的Debug打印
+println!("{a} {b} {b}", a = "x", b = "y"); // 命名参数
+
+# string add string
+let mut s1 = "Hello,".to_string();
+let s2 = "world".to_string();
+s1 += &s2;
+
+# iterator on string
+for c in my_str.chars() {
+    // do something with `c`
+}
+
+if let Some([b'@', filename @ ..]) = Some(b"@abc123") {
+  println!("filename {:?}", filename);
+}

@@ -1,0 +1,8 @@
+# ali dns
+dig youtube.com @233.5.5.5
+
+dig youtube.com @114.114.114.114
+dig youtube.com @8.8.8.8
+
+dig youtube.com @8.8.8.8 +tcp
+

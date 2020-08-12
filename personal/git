@@ -1,0 +1,29 @@
+#从缓冲区中移出文件
+git rm --cached <filename>          
+
+#从缓冲区中移出文件夹
+git rm -r --cached <directory>/     
+
+# 打包成tgz格式,方便scp
+git archive master | gzip > latest.tgz  
+
+# stash 单个文件
+git stash -- src/core/services/transactions/index.js 
+
+# git diff 技巧
+git diff path/to/dir > stashed.diff
+git checkout path/to/dir
+# 恢复
+git apply --3way stashed.diff
+
+# 删除所有未跟踪文件
+git clean -fd
+
+# 不再跟踪已经跟踪的文件
+git rm -f <filename>
+
+# temporary use vimdiff as git diff tool
+git difftool --tool=vimdiff -y
+git diff
+
+git show v0.6.0:src/main.rs | bat -l rs

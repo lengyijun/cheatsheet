@@ -1,0 +1,9 @@
+# virsh
+virsh -c qemu:///system
+virst -c qemu:///session
+
+list 
+list --all
+
+start   <name>
+console <name>

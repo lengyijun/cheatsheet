@@ -1,0 +1,6 @@
+# 将data.txt里的数据读出并画成折线图
+plot 'data.txt' with linespoints 
+
+
+# 以数据文件中的第一列为横坐标，第二列为绘坐标，绘制散点图(默认)。
+plot "data.txt" using 1:2

@@ -1,0 +1,48 @@
+# autojump的记录，可以删除某一行
+~/.local/share/autojump/autojump.txt  
+
+# gnome-calendar的存储位置
+~/.local/share/evolution/calendar     
+
+# calendar的默认存储位置
+# https://www.computerhope.com/unix/ucalande.htm
+/usr/share/calendar                   
+
+# docker
+/etc/docker/daemon.json
+~/.docker/config.json
+
+# system
+/etc/subuid
+/etc/subgid
+                                      
+# nautilus 的脚本位置
+/home/sjtu-lyj/.local/share/nautilus/scripts
+
+# systemctl service
+/lib/systemd/system/
+
+# cctk default installation
+/opt/dell/dcc
+
+# wine
+~/.wine/drive_c
+
+# apt-get 存放deb的位置.可以apt clean清理
+/var/cache/apt/archives
+
+# mpv
+~/.config/mpv/input.conf
+
+# cheat config 
+/home/sjtu-lyj/.config/cheat/conf.yml
+
+/etc/apt/sources.list
+
+# ssh欢迎语
+/etc/motd
+
+# put .sh  under here
+# and `chmod +x` to it
+# it will display on login
+/etc/profile.d/

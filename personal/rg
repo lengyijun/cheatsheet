@@ -1,0 +1,11 @@
+# 搜索中文
+rg --pcre2  "^((?!(\*|//)).)+[\x{4e00}-\x{9fa5}]" 
+
+# 不搜索baidu目录和target目录
+rg rand -g '!baidu' -g '!target'
+# or maybe
+rg rand --iglob 'baidu' --iglob 'target'
+
+# don't search .txt file
+rg -g '!*.txt' flock
+

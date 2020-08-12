@@ -1,0 +1,21 @@
+#include<limits.h>
+int a=INT_MIN
+
+# custom compare
+std::sort(std::begin(container), std::end(container),
+          [] (const auto& lhs, const auto& rhs) {
+    return lhs.first < rhs.first;
+});
+
+//最小堆
+priority_queue<int, vector<int>, greater<int> > q;
+
+//字符串匹配
+s1.find(s2) != std::string::npos
+
+//unique
+std::vector<int> v{1,2,1,1,3,3,3,4,5,4};
+auto last = std::unique(v.begin(), v.end());
+// v now holds {1 2 1 3 4 5 4 x x x}, where 'x' is indeterminate
+v.erase(last, v.end());
+

@@ -1,0 +1,4 @@
+# demangle the symbol names:
+nm xxx.a
+
+nm -gD xxx.so

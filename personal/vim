@@ -1,0 +1,55 @@
+gf         # go to file
+gu         # 转小写
+gU         # 转大写
+{          # prev paragraph
+}          # next paragraph
+
+ctrl+a     # number + 1
+ctrl+x     # number - 1
+
+U          # 恢复一整行
+:e!        # 恢复整个文件
+
+:unmap <C-x>          # 取消<C-x>的映射,回到本来减法的功能
+:verbose map <C-x>    # 查看谁替换了<C-x>
+
+:e         # reload file
+:put 1     # 黏贴1号寄存器的内容
+
+:close     # 关闭当前buffer
+:only      # 只保留当前buffer 
+
+:sort      # 按字母序排序  ;; 1 10 2
+:sort n    # 按数字序排序  ;; 1 2 10
+
+:g/\^\s*$/d   # 删除空行以及只有空格的行
+
+:earlier 10m  # 时光穿梭机
+:earlier 1h   
+:later 5s
+:undolist
+:undo
+
+#把单词间的 空格删除
+#注意\zs \ze的使用
+:bufdo :bufdo %s/\S\zs \ze\S//g
+
+:syntax off    # 关闭tex的亮亮
+
+%s/,/\r/g     # 把符号替换成换行符。vim中换行符是\r 而不是 \n
+%s/$/sth/     # 在行尾追加sth
+%s/^/    /    # 在行首加4个空格
+%s/\^M//g     # 替换掉dos换行符，\^M使用ctrl+v + Enter即可输入
+%s/#.*//g     # 删除#之后的字符
+
+/^hello       # 行尾
+/hello$       # 行首
+/hello\>      # 精确匹配
+
+vim + a.txt    # 直接打开到最后一行
+vim a.txt +20  # 打开到第20行
+vim `fzf`      # 选择文件并打开 
+
+# 可视模式下选中一段
+ctrl+r        #替换
+
