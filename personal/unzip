@@ -11,4 +11,6 @@ unzip -tq <archive>
 unzip -l <archive>
 
 # Clean up the garbage an accidental unzipping makes
+unzip -lt <filename.zip> | grep testing | awk '{print $2}' | xargs rm -rf
+# not good
 unzip -Z -1 <filename.zip> | xargs -I{} rm -v {}

@@ -12,6 +12,8 @@ cargo clone xxx
 
 # 生成依赖图
 cargo tree
+# 显示每个依赖的features
+cargo tree -e features
 
 # 下载所有的依赖到本地,不用每次联网同步
 cargo vendor

@@ -49,3 +49,19 @@ for c in my_str.chars() {
 if let Some([b'@', filename @ ..]) = Some(b"@abc123") {
   println!("filename {:?}", filename);
 }
+
+format!("{}{}","hello","world")
+
+# 打印长数组
+let a = [0; 33];
+println!("{:?}", &a[..]);
+
+# concat vector
+let concatenated = [&first[..], &second[..]].concat();
+
+#做参数时,用&[u8]好于&Vec<u8>
+Vec<u8> to [u8]  Vec<u8>.as_slice()
+
+
+#[inline]
+#[inline(always)]

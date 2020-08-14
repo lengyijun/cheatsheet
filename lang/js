@@ -1,4 +1,4 @@
 [1,2,3].includes(2)   # 判断列表中元素的存在
 
-Object.key({})        # object的key列表
+Object.keys({})        # object的key列表
 Object.value({})      # object的value列表
