@@ -65,3 +65,44 @@ Vec<u8> to [u8]  Vec<u8>.as_slice()
 
 #[inline]
 #[inline(always)]
+
+export RUST_LOG=info
+
+let range = 0..100;
+let a = repeat(3);
+range.zip(a).flat_map(|(i, j)| {
+  once(i).chain(once(j))
+})
+
+(0..).take(10).filter(|x|x%2==0)
+
+pub fn max_coins(piles: Vec<i32>) -> i32 {
+    let mut pp=piles.clone();
+    pp.sort();
+    let l=2*(pp.len()/3);
+    let mut it=pp.into_iter().rev().take(l);
+    it.next();
+
+    let mut sum:i32=0;
+
+    loop{
+        match it.next(){
+            Some(x)=>{
+                sum+=x;
+                it.next();
+            }
+            None=>{
+                return sum;
+            }
+        }
+    }
+}
+
+
+Rust         | Cpp              |                      
+=============|==================|=====================|=======================
+a:&T         | const T* const a | 都不能修改          | 不可变引用的不可变绑定
+mut a:&T     | const T* a       | 不能修改a指向的内容 | 不可变引用的可变绑定
+a:&mut T     | T* const a       | 不能修改a           | 可变引用的不可变绑定
+mut a:&mut T | T*a              | 都能修改            | 可变引用的可变绑定
+

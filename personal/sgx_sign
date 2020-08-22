@@ -1,1 +1,4 @@
 sgx_sign dump -enclave enclave.signed.so  -dumpfile <dumpfile>
+
+# MRENCLAVE
+cat <dumpfile> | grep enclave_css.body.enclave_hash.m -5

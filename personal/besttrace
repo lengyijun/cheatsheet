@@ -1,0 +1,4 @@
+# execute on VPS
+wget -qO- git.io/autobesttrace | bash
+
+sudo env PATH=$PATH besttrace  -q1 45.78.3.22

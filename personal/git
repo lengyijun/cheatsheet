@@ -27,3 +27,8 @@ git difftool --tool=vimdiff -y
 git diff
 
 git show v0.6.0:src/main.rs | bat -l rs
+
+# 把master刷到和3个提交之前
+git branch -f master HEAD~3
+
+git clone -b <branch> <url>

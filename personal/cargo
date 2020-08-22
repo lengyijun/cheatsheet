@@ -20,3 +20,6 @@ cargo vendor
 
 # check
 cargo clippy
+
+# expand macro
+cargo expand

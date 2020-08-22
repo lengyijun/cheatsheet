@@ -21,22 +21,7 @@ stat <filename>              # 查看access、modify、change time
 look                         # 在/usr/share/dict/words中查找单词
 dmesg -wh                    # 打开dmesg的正确姿势
 rev                          # 反转字符串
-grep -5 'pattern'            # 匹配的上下5行
 rm !(*.tex|*.pdf)            # deletes all except the tex and pdf files.
-
-# 计算未知字符串的长度
-echo 0x6d6a1571da2D5C442AE632AAa0E3695096B704CF  | wc -c
-
-echo    "hello world"
-echo -n "hello world"        # 去掉结尾的空行
-
-ssh -t hostA ssh hostB       # directly ssh to host B that is only accessible through host A
-
-#把开在127.0.0.1的端口开放到公网ip
-ssh -f -N -L 10.1.1.3:8888:127.0.0.1:8888 127.0.0.1   
-
-# 把 80 绑定到 8080 端口
-sudo ssh  -L 80:127.0.0.1:8080 -N  sjtu-lyj@127.0.0.1
 
 #把wasm的hex打印出来，需要头部加上0x，尾部处理%
 od  -tx1 hello.wasm | awk '{$1=""}1'  | tr -d " \n"
@@ -51,14 +36,16 @@ sed -n '3~2'p log.txt        # log.txt从第三行开始，每隔两行打印一
 
 #以下是一些需要额外装的命令或者冷门命令,挺有用的
 shellcheck                   # write better shell code
+aspell check my.txt          # 交互式的拼写检查
 fpp                          # 其实没怎么用过
 mycli                        # mysql command line
 xev                          # 查看键盘组合键的编码,参见 https://pavelmakhov.com/2016/06/awesome-wm-fn-keys/
 notify-send                  # 桌面提醒
-aspell check my.txt          # 交互式的拼写检查
-mkbook                       # 类似于GitBook
+mdbook                       # 类似于GitBook
 vidir                        # moreutils 里的东西
 xxd                          # 不要用od hexdump
 tidy                         # format html/xml
 fx                           # interactive json viewer
+whence                       # similar to which
+                             # which = whence -c
 
