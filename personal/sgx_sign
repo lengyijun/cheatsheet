@@ -1,3 +1,4 @@
+# 查看 enclave.signed.so 的详细信息
 sgx_sign dump -enclave enclave.signed.so  -dumpfile <dumpfile>
 
 # MRENCLAVE
