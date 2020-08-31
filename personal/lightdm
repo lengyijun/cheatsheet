@@ -1,0 +1,9 @@
+# 从文字启动改成图形启动
+sudo apt install lightdm --reinstall
+modify /etc/default/grub
+sudo update-grub
+
+# 从图形启动改成文字启动
+sudo systemctl disable lightdm
+modify /etc/default/grub
+sudo update-grub

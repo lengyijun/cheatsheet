@@ -3,3 +3,9 @@ ctrl+alt+L
 
 #搜索中文的正则表达式
 ^((?!(\*|//)).)+[\u4e00-\u9fa5]
+
+# last view location
+ctrl+alt+left
+
+# forward view location
+ctrl+alt+right        

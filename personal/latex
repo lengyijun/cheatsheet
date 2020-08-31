@@ -26,3 +26,6 @@ do something
 
 % 组合数
 \binom{4n+3}{2}
+
+# 查看系统字体
+fc-list

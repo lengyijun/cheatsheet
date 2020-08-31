@@ -1,0 +1,16 @@
+# 裁剪json
+jq '. | { COUNT : { "tantivy-sgx": .COUNT."tantivy-sgx", "tantivy-0.13": .COUNT."tantivy-0.13" }, TOP_10: { "tantivy-sgx": .TOP_10."tantivy-sgx", "tantivy-0.13": .TOP_10."tantivy-0.13" } , TOP_10_COUNT: { "tantivy-sgx": .TOP_10_COUNT."tantivy-sgx", "tantivy-0.13": .TOP_10_COUNT."tantivy-0.13" } }' < results.json
+
+# To pretty print the json:
+jq "." < filename.json
+
+# To access the value at key "foo":
+jq '.foo'
+
+# To access first list item:
+jq '.[0]'
+
+# to slice and dice:
+jq '.[2:4]'
+jq '.[:3]'
+jq '.[-2:]'

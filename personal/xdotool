@@ -1,0 +1,8 @@
+# type a
+xdotool key a
+xdotool key alt+Tab
+xdotool type 'word'
+xdotool type "word
+"
+
+xdotool get_desktop

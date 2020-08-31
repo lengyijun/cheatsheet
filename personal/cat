@@ -1,0 +1,8 @@
+# 隐藏的字符也打印出来
+cat -A <file>
+
+# To display file contents with line numbers
+cat -n <file>
+
+# To display file contents with line numbers (blank lines excluded)
+cat -b <file>

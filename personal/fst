@@ -1,0 +1,3 @@
+fst dot map.fst |  dot -Tpng > your-transducer.png
+
+fst range months.fst

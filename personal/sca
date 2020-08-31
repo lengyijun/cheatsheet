@@ -1,0 +1,14 @@
+# side channel attack
+
+## 传统的sca攻击
+1. syscall snooping
+2. page fault based 
+3. cache-based side-channel attacks
+
+## 新式的(2018)
+meltdown(瞬态攻击)
+
+# 冷门的
+power monitoring attacks 
+electromagnetic attacks
+hardware bus snooping based side-channels

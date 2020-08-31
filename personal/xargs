@@ -1,5 +1,9 @@
-% 在xargs中使用自己定义的函数
-% 只在bash下适用
+# 打印每条命令
+xargs -t
+
+# 在xargs中使用自己定义的函数
+# 只在bash下适用
 export -f pp
 cat a.txt | xargs -I {} bash -c 'pp "{}" 3 10'
 
+xargs -t -0 -n1 -d$'\n' -I{} curl -d '{"payload":'{}',"owner":"peer1.org1.example.com"}' -X POST -H 'Content-Type: application/json' localhost:8888/data/upload < yaa

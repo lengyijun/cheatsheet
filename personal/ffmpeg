@@ -3,6 +3,15 @@
 ffmpeg -t 3 -ss 00:00:02 -i -b 2048k small.webm small-clip.gif
 ffmpeg -t 60 -ss 02:09:40 -i https://..../index.m3u8 small-clip.mp4
 
+# 把视频合成左右两部分
+ffmpeg -i b.mp4 -i c.mp4 \
+ -filter_complex \
+    "[0:v]pad=iw*2:ih[int]; \
+     [int][1:v]overlay=W/2:0[vid]" \
+-map "[vid]" \
+-c:v libx264 -crf 23 \
+output.mp4
+
 # To print file metadata:
 ffmpeg -i <file>
 

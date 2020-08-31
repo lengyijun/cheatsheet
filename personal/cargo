@@ -15,6 +15,9 @@ cargo tree
 # 显示每个依赖的features
 cargo tree -e features
 
+# 依赖图,用graphviz画的
+cargo deps | dot -Tpng > graph.png
+
 # 下载所有的依赖到本地,不用每次联网同步
 cargo vendor
 
@@ -23,3 +26,9 @@ cargo clippy
 
 # expand macro
 cargo expand
+
+cargo install --path .
+
+# call me when finished
+cargo build --release && \
+	echo Back to work | espeak

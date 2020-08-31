@@ -9,3 +9,8 @@ rg rand --iglob 'baidu' --iglob 'target'
 # don't search .txt file
 rg -g '!*.txt' flock
 
+# 被.gitignore忽略的文件也搜索
+rg ecall_split_idx --no-ignore-vcs
+
+# multiline
+rg -U

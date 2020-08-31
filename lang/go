@@ -1,45 +1,13 @@
-// for loop
-for count := 0; count <= 10; count++ {
-  fmt.Println("My counter is at", count)
-}
+# 传递goimports这个可执行文件的路径给go version命令，就可以打印出goimports这个可执行文件的构建版本信息，从结果看，我电脑里的goimports是使用go1.13版本构建的。
+go version goimports
+goimports: go1.13
 
-// map loop
-var m map[int]string
-for k := range m {
-    keys = append(keys, k)
-}
+go version goimports gocode
+goimports: go1.13
+gocode: go1.13
 
-var ch chan int        // not initialized, cannot be used
-ch = make(chan int,1)  // can use it now
-                       // `[] chan int` should be `make(chan int,1)` one by one
+# 只需要加一个-m标识就可以打印出go mod信息。比如gocode的，可以看出它的github地址是github.com/mdempsky/gocode,模块名也一样，并且依赖了golang.org/x/tools库，并且还显示了库的版本。
+# 当我们研究一个可执行文件的时候非常有用，因为你可以看到它的地址，它依赖了哪些第三方库
+go version -m gocode
 
-// int to string
-strconv.Itoa(12)
-
-
-// print struct 
-fmt.Printf("%+v\n", yourStruct)
-
-// clear a map
-// is to make a new one
-make(map[string]int)
-
-// concatenate two slices
-x = append(a,b...)
-
-// custom sort
-sort.Slice(planets, func(i, j int) bool {
-    return planets[i].Axis < planets[j].Axis
-})
-
-
-//json marshal
-import "encoding/json"
-jsonStu, err := json.Marshal(stu)
-if err != nil {
-    fmt.Println("生成json字符串错误")
-}
-
-//json unmarshal
-stu:=StuRead{}
-err:=json.Unmarshal(str,&stu)
+export GOPROXY=https://goproxy.cn

@@ -1,0 +1,4 @@
+登陆管理器(Display Manager,DM):
+管理登录界面
+gdm,lightdm,sddm
+你可以不需要DM，直接通过startx脚本命令进入桌面。startx是对xinit的封装

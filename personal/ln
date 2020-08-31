@@ -1,0 +1,14 @@
+# To create a symlink:
+ln -s <source-location> <symlink-location>
+
+# To create a symlink to cwd
+ln -s <source-location> 
+
+# To symlink, while overwriting existing destination files
+ln -sf <source-location> <symlink-location>
+
+软链接可以跨磁盘
+硬链接不能跨磁盘
+
+软链接可以链接目录
+硬链接不能链接目录

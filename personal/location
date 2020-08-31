@@ -46,3 +46,16 @@
 # and `chmod +x` to it
 # it will display on login
 /etc/profile.d/
+
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
+
+# wifi密码的位置
+/etc/NetworkManager/system-connections
+
+/usr/share/dict/words
+
+# 桌面文件的位置
+/usr/share/xsessions
+
+# global gitignore
+~/.config/git/ignore

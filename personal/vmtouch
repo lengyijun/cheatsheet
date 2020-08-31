@@ -1,0 +1,23 @@
+# How much of big-dataset.txt is currently in memory?
+vmtouch -v big-dataset.txt
+
+# put last part of big-dataset.txt into memory
+tail -n 10000 big-dataset.txt > /dev/null
+vmtouch -v big-dataset.txt
+
+# put first part of big-dataset.txt into memory
+head -n 10000 big-dataset.txt > /dev/null
+vmtouch -v big-dataset.txt
+
+如果先head 再 tail,就能造成头尾都有缓存的情况
+
+# evict a.txt from memory
+vmtouch -ve a.txt
+
+# Daemonise and lock all files in a directory into physical memory
+vmtouch -dl /var/www/htdocs/critical/
+
+/usr/share/dict/american-english
+
+# 把文件的一部分放到内存中
+vmtouch -t -p 1G-2G corpus.json

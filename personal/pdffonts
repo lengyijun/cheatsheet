@@ -1,0 +1,5 @@
+# see all fonts
+pdffonts c.pdf
+
+# show all fonts used on page 22
+pdffonts -f 22 -l 22 c.pdf

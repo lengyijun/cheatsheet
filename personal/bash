@@ -23,6 +23,10 @@ dmesg -wh                    # 打开dmesg的正确姿势
 rev                          # 反转字符串
 rm !(*.tex|*.pdf)            # deletes all except the tex and pdf files.
 
+# equal to `sort | uniq`
+# but without sort and keep order
+awk ' !x[$0]++' file3
+
 #把wasm的hex打印出来，需要头部加上0x，尾部处理%
 od  -tx1 hello.wasm | awk '{$1=""}1'  | tr -d " \n"
 
@@ -48,4 +52,6 @@ tidy                         # format html/xml
 fx                           # interactive json viewer
 whence                       # similar to which
                              # which = whence -c
-
+dia                          # processon
+nmtui                        # 终端连网络
+scrcpy                       # 屏幕连手机

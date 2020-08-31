@@ -1,0 +1,49 @@
+// for loop
+for count := 0; count <= 10; count++ {
+  fmt.Println("My counter is at", count)
+}
+
+// map loop
+var m map[int]string
+for k := range m {
+    keys = append(keys, k)
+}
+
+var ch chan int        // not initialized, cannot be used
+ch = make(chan int,1)  // can use it now
+                       // `[] chan int` should be `make(chan int,1)` one by one
+
+// int to string
+strconv.Itoa(12)
+
+
+// print struct 
+fmt.Printf("%+v\n", yourStruct)
+
+// clear a map
+// is to make a new one
+make(map[string]int)
+
+// concatenate two slices
+x = append(a,b...)
+
+// custom sort
+sort.Slice(planets, func(i, j int) bool {
+    return planets[i].Axis < planets[j].Axis
+})
+
+
+//json marshal
+import "encoding/json"
+jsonStu, err := json.Marshal(stu)
+if err != nil {
+    fmt.Println("生成json字符串错误")
+}
+
+//json unmarshal
+stu:=StuRead{}
+err:=json.Unmarshal(str,&stu)
+
+wg.add(1) 要放在goroutine之前,否则goroutine不一定调度的到
+所以想要稳定执行的东西,要放在goroutine外
+goroutine外的命令比goroutine内的稳定

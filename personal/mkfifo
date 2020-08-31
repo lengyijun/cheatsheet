@@ -1,0 +1,3 @@
+mkfifo pipe
+echo "hello" > pipe
+<pipe

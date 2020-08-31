@@ -1,0 +1,4 @@
+vtune -collect hotspots ./jiting
+
+vtune -report summary -report-knob show-issues=false -r <my_result_dir>
+vtune -report <report_name> -format=csv

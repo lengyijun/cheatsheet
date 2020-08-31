@@ -4,3 +4,5 @@ echo 0x6d6a1571da2D5C442AE632AAa0E3695096B704CF  | wc -c
 echo    "hello world"
 echo -n "hello world"        # 去掉结尾的空行
 
+
+echo {1,2,3}{1,2,3}{1,2,3}

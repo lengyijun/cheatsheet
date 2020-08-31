@@ -16,15 +16,17 @@ git checkout path/to/dir
 # 恢复
 git apply --3way stashed.diff
 
+# temporary use vimdiff as git diff tool
+git difftool --tool=vimdiff -y
+git diff
+
+git diff <hash1> <hash2> <filename>
+
 # 删除所有未跟踪文件
 git clean -fd
 
 # 不再跟踪已经跟踪的文件
 git rm -f <filename>
-
-# temporary use vimdiff as git diff tool
-git difftool --tool=vimdiff -y
-git diff
 
 git show v0.6.0:src/main.rs | bat -l rs
 
@@ -32,3 +34,16 @@ git show v0.6.0:src/main.rs | bat -l rs
 git branch -f master HEAD~3
 
 git clone -b <branch> <url>
+
+git remote add origin https://gitee.com/ggdG/hhh.git
+
+# 列举所有被git ignore的文件
+find . | git check-ignore --stdin
+
+# split commit
+# 先切回上一个commit
+# 而且保持修改
+# 然后重新提交
+git reset HEAD~
+
+ungit # best git gui

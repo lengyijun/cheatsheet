@@ -24,6 +24,7 @@ for ch in 'a'..='z' {
   print!("{}",ch);
 }
 
+println!("{:#x?}", region);  //最佳写法 http://dtrace.org/blogs/bmc/2020/10/11/rust-after-the-honeymoon/
 println!("{}", 1); // 默认用法,打印Display
 println!("{:o}", 9); // 八进制
 println!("{:x}", 255); // 十六进制 小写
@@ -35,6 +36,12 @@ println!("{:E}", 10000f32); // 科学计数(大写)
 println!("{:?}", "test"); // 打印Debug
 println!("{:#?}", ("test1", "test2")); // 带换行和缩进的Debug打印
 println!("{a} {b} {b}", a = "x", b = "y"); // 命名参数
+
+format!("{}{}","hello","world")
+
+# 打印长数组
+let a = [0; 33];
+println!("{:?}", &a[..]);
 
 # string add string
 let mut s1 = "Hello,".to_string();
@@ -49,12 +56,6 @@ for c in my_str.chars() {
 if let Some([b'@', filename @ ..]) = Some(b"@abc123") {
   println!("filename {:?}", filename);
 }
-
-format!("{}{}","hello","world")
-
-# 打印长数组
-let a = [0; 33];
-println!("{:?}", &a[..]);
 
 # concat vector
 let concatenated = [&first[..], &second[..]].concat();
@@ -98,6 +99,14 @@ pub fn max_coins(piles: Vec<i32>) -> i32 {
     }
 }
 
+let mut floats = [5f64, 4.0, 1.0, 3.0, 2.0];
+floats.sort_by(|a, b| a.partial_cmp(b).unwrap());
+assert_eq!(floats, [1.0, 2.0, 3.0, 4.0, 5.0]);
+
+let (tx1, rx1) = channel::<String>();
+let (tx1, rx1) = channel::<u32>();
+
+可以只有clone,没有copy
 
 Rust         | Cpp              |                      
 =============|==================|=====================|=======================
@@ -106,3 +115,42 @@ mut a:&T     | const T* a       | 不能修改a指向的内容 | 不可变引用
 a:&mut T     | T* const a       | 不能修改a           | 可变引用的不可变绑定
 mut a:&mut T | T*a              | 都能修改            | 可变引用的可变绑定
 
+# 保证这个函数相同的参数,返回的结果都一样
+# 带有一定的合同性质
+const fn # 和cpp的constexpr一样
+         # cpp的consteval强制编译时求值,rust中没有这样的东西
+
+str一定能转[u8]
+str是utf8编码的字节序列
+[u8]不一定能转str
+
+&str才是核心.
+str本身没有用处
+
+impl Deref for ReadOnlySource {
+  type Target = [u8];
+
+  fn deref(&self) -> &[u8] {
+      self.as_slice()
+  }
+}
+
+GAT(generic Associated Types)
+在iterator中,塞带生命周期的参数
+
+fn twich(f:fn(i32)->i32)->Box<dyn Fn(i32)->i32>{
+  Box::new(move |a|f(f(a)))
+}
+
+fn double(args:i32)->i32{ args*2}
+
+fn main(){
+  let g=twich(double);
+  println!("{}",g(2));
+}
+
+
+Weak 与 Rc类似,是可以共享的
+Weak在deallocation时候不发挥作用
+
+[cfg(not(target_pointer_width = "64"))]

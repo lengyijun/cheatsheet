@@ -30,9 +30,17 @@ slabtop -s c
 -------------------------------------------------------------------------------
 
 # Disk
-iostat -xz 1
 df -hT
 swapon -s
+fio
+
+# 从盘的角度
+iostat -xz 1
+
+# 从进程的角度
+iotop
+# 只看有IO输出的进程
+iotop -o
 
 # better du
 ncdu                         
@@ -41,6 +49,7 @@ ncdu
 # Bandwidth per process
 sudo iftop
 nethogs
+bmon
 
 -------------------------------------------------------------------------------
 

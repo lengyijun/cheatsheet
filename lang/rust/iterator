@@ -1,0 +1,15 @@
+struct Jiting(i32);
+
+impl Iterator for Jiting {
+    type Item = String;
+
+    fn next(&mut self) -> Option<String> {
+        if self.0 == 0 {
+            None
+        } else {
+            let x = self.0 % 10;
+            self.0 /= 10;
+            Some(x.to_string())
+        }
+    }
+}

@@ -1,0 +1,10 @@
+# gnu parallel
+# build from source
+# not from apt
+# http://manpages.ubuntu.com/manpages/xenial/man1/parallel.1.html
+
+# gnu parallel will print version
+# others will not
+parallel --version
+
+time parallel --bar -t -I{} curl -G --data-urlencode 'keyword='{}'' localhost:8888/data/search < dict

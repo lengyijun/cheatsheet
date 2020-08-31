@@ -2,10 +2,15 @@
 tags [ networking ]
 ---
 
+# 22 打开的ip
 nmap -n --open 22 192.168.1.255/24
 
-# Single target scan:
-nmap [target]
+# 1-65536
+nmap -p- 10.0.0.6
+
+# Aggresive
+# 1-65536
+nmap -A -p- 10.0.0.6
 
 # Scan from a list of targets:
 nmap -iL [list.txt]

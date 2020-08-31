@@ -1,0 +1,4 @@
+尽量用to_vec from_slice
+如果遇到trailing chararctor的问题,就用32填充.32是空格的意思
+
+#[serde(skip)]
