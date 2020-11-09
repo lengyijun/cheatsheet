@@ -1,4 +1,6 @@
 sgx只在第6代以上才有
+或者去官网上查
+https://ark.intel.com/content/www/us/en/ark/products/88196/intel-core-i7-6700-processor-8m-cache-up-to-4-00-ghz.html
 
 同一个enclave.signed.so的不同实例在运行时是不可区分的
 
@@ -25,6 +27,7 @@ xml中开的堆越大,enclave启动越慢.所以要开一个内存正好可用�
 不用的sgx要及时destroy掉.省内存
 
 enclave可以被反汇编,所以enclave内部的逻辑是公开的,不能靠在enclave里面藏东西,比如藏算法,藏私钥什么的
+nm enclave.signed.so | grep ecall
 
 # 如何在SGX内部传出一个长度未知的buffer
 在外面开一个1024的buffer,指针传进去. [out,size=1024]
@@ -140,3 +143,5 @@ sgx程序一般比普通程序慢2-3倍
 
 # ?
 sgx内置一个椭圆曲线上的点.用来做DH通信
+
+sgx在处理缺页中断的时候，只说明我缺了哪个页，但是不说页上的偏移量

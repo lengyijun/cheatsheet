@@ -1,6 +1,12 @@
 # print certain lines 
 sed -n "1945,1952p" ~/.zsh_history
 
+# log.txt从第三行开始，每隔两行打印一下
+sed -n '3~2'p log.txt        
+
+# 删除所有%开头的行
+sed '/^%/ d'                 
+
 # To replace all occurrences of "day" with "night" and write to stdout:
 sed 's/day/night/g' <file>
 

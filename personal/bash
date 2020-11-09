@@ -34,10 +34,6 @@ od  -tx1 hello.wasm | awk '{$1=""}1'  | tr -d " \n"
 
 wc < a.txt                   # 用在脚本里,不会输出文件名
 
-sed '/^%/ d'                 # 删除所有%开头的行
-sed -n '5249,5253'p log.txt  # 打印log.txt文件的5249-5253行
-sed -n '3~2'p log.txt        # log.txt从第三行开始，每隔两行打印一下
-
 #以下是一些需要额外装的命令或者冷门命令,挺有用的
 shellcheck                   # write better shell code
 aspell check my.txt          # 交互式的拼写检查
