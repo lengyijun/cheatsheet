@@ -51,3 +51,5 @@ whence                       # similar to which
 dia                          # processon
 nmtui                        # 终端连网络
 scrcpy                       # 屏幕连手机
+viu                          # terminal view image
+bandwhich                    # 网络流量查看
