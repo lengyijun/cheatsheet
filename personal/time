@@ -1,3 +1,5 @@
 # record time output in append mode
 /usr/bin/time -a -o outfile.txt ls
 
+# verbose,输出比较友好
+/usr/bin/time -v <cmd>
