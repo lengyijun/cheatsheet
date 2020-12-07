@@ -27,6 +27,10 @@ free -m
 vmstat 1
 dstat     #  better vmstat
 slabtop -s c
+
+# per process
+# https://rust-analyzer.github.io/blog/2020/12/04/measuring-memory-usage-in-rust.html
+heaptrack
 -------------------------------------------------------------------------------
 
 # Disk
