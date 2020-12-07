@@ -1,0 +1,2 @@
+# detect badblocks
+badblocks -v /dev/sda7 > badsectors.txt
