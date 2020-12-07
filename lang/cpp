@@ -20,7 +20,6 @@ auto last = std::unique(v.begin(), v.end());
 v.erase(last, v.end());
 
 // subset of binary
-//for (int cs = (a - 1) & a; cs; cs = (cs - 1) & a) {
-for (int cs = a - 1; cs>0; cs = (cs - 1) & a) {
+for (int cs = (a - 1) & a; cs; cs = (cs - 1) & a) {
   cout<<cs<<endl;
 }
