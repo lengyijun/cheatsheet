@@ -4,8 +4,6 @@ https://ark.intel.com/content/www/us/en/ark/products/88196/intel-core-i7-6700-pr
 
 同一个enclave.signed.so的不同实例在运行时是不可区分的
 
-一个enclave不能访问另一个enclave的内存
-
 同一个进程创建许多个enclave,id依次是2,3,4...
 
 一个进程创建的enclave,不能被另一个进程调用,原因是你连id都不知道. id 是进程隔离的
@@ -24,6 +22,7 @@ openssl genrsa -out new.pem -3 3072
 
 xml中开的堆越大,enclave启动越慢.所以要开一个内存正好可用的enclave. 可以用sgx-gdb来测试用了多少内存. 反正上限128M
 
+一个enclave不能访问另一个enclave的内存
 不用的sgx要及时destroy掉.省内存
 
 enclave可以被反汇编,所以enclave内部的逻辑是公开的,不能靠在enclave里面藏东西,比如藏算法,藏私钥什么的
@@ -32,6 +31,8 @@ nm enclave.signed.so | grep ecall
 # 如何在SGX内部传出一个长度未知的buffer
 在外面开一个1024的buffer,指针传进去. [out,size=1024]
 在SGX里面复制到buffer
+
+SGX可以访问非安全区的内存，标记为[user_check]
 
 unsafe {
   std::ptr::copy_nonoverlapping(x.as_ptr(), result_string, x.len());
