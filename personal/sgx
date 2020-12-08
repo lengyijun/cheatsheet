@@ -136,8 +136,9 @@ enclave会先加载到LE,LE会检查,然后发一个ETOKEN
 - 上下文切换慢
 
 # sgx缺少的东西:
-mlock
+mlock(把page锁在DRAM中，不被交换到swap里)
 madvice
+mincore(判断一个page在DRAM还是swap)
 
 sgx程序一般比普通程序慢2-3倍
 
