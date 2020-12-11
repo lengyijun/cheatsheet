@@ -1,0 +1,26 @@
+/home/sjtu-lyj/.local/csgo/steamapps/common/Counter-Strike Global Offensive/csgo/cfg
+
+bot_kick
+mp_autoteambalance 0
+mp_maxmoney 8000
+mp_maxrounds 50
+mp_startmoney 800
+mp_buytime 60
+mp_buy_anywhere 1
+mp_freezetime 3
+mp_friendlyfire 1
+mp_limitteams 10
+mp_solid_teammates 1
+bot_difficulty 3
+bot_add_t
+bot_add_ct
+bot_add_t
+bot_add_ct
+bot_add_t
+bot_add_ct
+bot_add_t
+bot_add_ct
+bot_add_t
+bot_add_ct
+bot_add_t
+bot_add_ct
