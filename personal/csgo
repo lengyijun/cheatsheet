@@ -1,6 +1,6 @@
 :27015
 
-/home/sjtu-lyj/.local/csgo/steamapps/common/Counter-Strike Global Offensive/csgo/cfg
+~/.local/csgo/steamapps/common/Counter-Strike Global Offensive/csgo/cfg
 
 bot_kick
 mp_autoteambalance 0
