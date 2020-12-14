@@ -1,5 +1,7 @@
 :27015
 
+-worldwide -full
+
 ~/.local/csgo/steamapps/common/Counter-Strike Global Offensive/csgo/cfg
 
 bot_kick
@@ -26,3 +28,5 @@ bot_add_t
 bot_add_ct
 bot_add_t
 bot_add_ct
+
+map italy
