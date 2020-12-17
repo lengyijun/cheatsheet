@@ -22,7 +22,7 @@ openssl genrsa -out new.pem -3 3072
 
 xml中开的堆越大,enclave启动越慢.所以要开一个内存正好可用的enclave. 可以用sgx-gdb来测试用了多少内存. 反正上限128M
 
-一个enclave不能访问另一个enclave的内存
+一个enclave不能访问另一个enclave的内存.但是如果是由同一个线程创建的，可以通过共享一段非EPC的内存。
 不用的sgx要及时destroy掉.省内存
 
 enclave可以被反汇编,所以enclave内部的逻辑是公开的,不能靠在enclave里面藏东西,比如藏算法,藏私钥什么的
@@ -151,3 +151,11 @@ sgx在处理缺页中断的时候，只说明我缺了哪个页，但是不说�
 sgx中没有处理panic的钩子，报错打印不出来，所以需要先
 eprintln!("{}",e);
 panic!(e);
+
+/sys/module/isgx
+ksgxswapd
+
+Native
+Scone
+SGX-LKL
+Graphene
