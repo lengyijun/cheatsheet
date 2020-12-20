@@ -38,6 +38,8 @@ set invlist  # 显示不可见字符
 
 :syntax off    # 关闭tex的亮亮
 
+:read !date   # 插入时间
+
 %s/,/\r/g     # 把符号替换成换行符。vim中换行符是\r 而不是 \n
 %s/$/sth/     # 在行尾追加sth
 %s/^/    /    # 在行首加4个空格
