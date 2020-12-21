@@ -1,4 +1,5 @@
 PCMD: Page Crypto Metadata
+SECS: SGX enclave control structure
 PT: Page Type
 
 sgx只在第6代以上才有
