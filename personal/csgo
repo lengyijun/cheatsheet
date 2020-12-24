@@ -3,6 +3,8 @@
 -worldwide -full
 
 ~/.local/csgo/steamapps/common/Counter-Strike Global Offensive/csgo/cfg
+~/.steam/debian-installation/steamapps/common/Counter-Strike Global Offensive/csgo/scripts/items
+
 
 bot_kick
 mp_autoteambalance 0
