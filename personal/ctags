@@ -1,0 +1,16 @@
+# list functions
+ctags -x --c-types=f  sgx_main.c 
+
+c   classes
+d   macro definitions (and #undef names)
+e   enumerators
+f   function definitions
+g   enumeration names
+m   class, struct, or union members
+n   namespaces
+p   function prototypes and declarations [off]
+s   structure names
+t   typedefs
+u   union names
+v   variable definitions
+x   extern and forward variable declarations [off]

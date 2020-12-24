@@ -163,3 +163,6 @@ Native
 Scone
 SGX-LKL
 Graphene
+
+sgx分配内存，并不会等到EPC一点都没有了才报内存错误，而是在内存比较少的时候就而开始报错了
+因为page fault handler也需要一定的内存,是2个EPC页
