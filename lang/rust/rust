@@ -154,3 +154,14 @@ Weak 与 Rc类似,是可以共享的
 Weak在deallocation时候不发挥作用
 
 [cfg(not(target_pointer_width = "64"))]
+
+enum F{
+    A=1,
+    B=2
+}
+
+fn main() {
+    let x=F::A as usize;
+    println!("{}",x);
+}
+

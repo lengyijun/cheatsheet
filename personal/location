@@ -59,3 +59,6 @@ cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
 # global gitignore
 ~/.config/git/ignore
+
+# Appimage
+~/.config/appimagelauncher.cfg 
