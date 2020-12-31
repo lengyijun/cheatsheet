@@ -62,3 +62,6 @@ cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
 # Appimage
 ~/.config/appimagelauncher.cfg 
+
+# manjaro
+/etc/pacman.d/mirrorlist
