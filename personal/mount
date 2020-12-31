@@ -1,0 +1,17 @@
+# To mount / partition as read-write in repair mode:
+mount -o remount,rw /
+
+# chroot时没有/dev/null 
+sudo mount -o remount /dev/sdc5 /run/media/lyj/b90728f0-f38b-41c0-b7dd-52bab760b775
+
+# To bind mount path to a second location:
+mount --bind <source> <destination>
+
+# To mount Usb disk as user writable:
+mount -o uid=username,gid=usergroup /dev/sdx /mnt/xxx
+
+# To mount a remote NFS directory:
+mount -t nfs <host>:<remote-dir> <local-dir>
+
+# To mount an ISO:
+mount -o loop disk1.iso /mnt/disk
