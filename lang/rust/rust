@@ -127,6 +127,10 @@ str是utf8编码的字节序列
 &str才是核心.
 str本身没有用处
 
+# 替换全局的allocator
+#[global_allocator]
+static GLOBAL: System = System;
+
 impl Deref for ReadOnlySource {
   type Target = [u8];
 
