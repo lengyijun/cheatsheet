@@ -2,6 +2,11 @@
 tags: [ packaging ]
 ---
 
+https://wiki.archlinux.org/index.php/Pacman/Rosetta#Verification_and_repair
+
+# apt update && apt upgrade && apt dist-upgrade
+pacman -Syu
+
 #Like -Sy but for package file information
 pacman -Fy 
 
@@ -9,10 +14,14 @@ pacman -Fy
 pacman -F gtags
 
 # To install a package:
+# apt install
 pacman -S <package>...
 
 # To uninstall a package:
 pacman -R <package>...
+
+# apt remove
+pacman -Rs <package>...
 
 # OUT-OF-DATE
 # To update the local package base and upgrade all out-of-date packages:
