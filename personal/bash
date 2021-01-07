@@ -38,7 +38,6 @@ wc < a.txt                   # 用在脚本里,不会输出文件名
 shellcheck                   # write better shell code
 aspell check my.txt          # 交互式的拼写检查
 fpp                          # 其实没怎么用过
-mycli                        # mysql command line
 xev                          # 查看键盘组合键的编码,参见 https://pavelmakhov.com/2016/06/awesome-wm-fn-keys/
 notify-send                  # 桌面提醒
 mdbook                       # 类似于GitBook
@@ -52,4 +51,4 @@ dia                          # processon
 nmtui                        # 终端连网络
 scrcpy                       # 屏幕连手机
 viu                          # terminal view image
-bandwhich                    # 网络流量查看
+parcellite                   # clipboard manager
