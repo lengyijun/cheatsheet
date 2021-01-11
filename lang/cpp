@@ -33,3 +33,9 @@ upper_bound
 
 # 在单调递增序列中，x的个数
 upper_bound(a,a+n,x)-lower_bound(a,a+n,x)
+
+# delete one item
+multiset.erase(iterator)
+
+# delete all items
+multiset.erase(1)
