@@ -1,0 +1,5 @@
+# system theme location
+/usr/share/konsole
+
+# change konsole theme
+konsoleprofile colors=NAME
