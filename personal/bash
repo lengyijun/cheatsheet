@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 bash -x util.sh              # 打印所有执行的命令
-set -e                       # 有错误就停止
 set -x                       # 打印执行的命令
 set -u                       # 未定义的变量报错
+set -e                       # 有错误就停止
+
+# set -e不适用于管道
+# 管道中一个错误，整个管道就算失败
+set -o pipefail
 
 (ping www.ibm.com &)         # 后台运行程序
 
