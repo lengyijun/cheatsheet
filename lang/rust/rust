@@ -163,9 +163,20 @@ enum F{
     A=1,
     B=2
 }
+let x=F::A as usize;
+println!("{}",x);
 
-fn main() {
-    let x=F::A as usize;
-    println!("{}",x);
+
+# 获取地址
+{
+  let x = &42;
+  let y = format!("{:p}", x);
+  let address = y.trim_start_matches("0x");
+  let z = u64::from_str_radix(&address, 16);
+  println!("{:?}", z);
 }
 
+{
+  let address = &42 as *const i32;
+  println!("{:?}", address);
+}

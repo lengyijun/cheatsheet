@@ -1,0 +1,2 @@
+// int to char*
+char s[] = {'0' + x, '\0'};
