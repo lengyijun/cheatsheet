@@ -1,6 +1,10 @@
 ---
 tags: [ packaging ]
 ---
+# Download deb
+sudo apt download <package>
+unar a.deb
+
 apt install <package> --reinstall
 
 apt list --installed
@@ -16,6 +20,3 @@ apt dist-upgrade
 
 # To perform a full system upgrade:
 apt update && apt dist-upgrade
-
-# To uninstall package(s):
-apt remove <package>...
