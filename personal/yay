@@ -1,0 +1,5 @@
+yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
+
+yay -P -g
+
+~/.config/yay/config.json
