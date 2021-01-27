@@ -50,5 +50,6 @@ find . | git check-ignore --stdin
 # 然后重新提交
 git reset HEAD~
 
-ungit # best git gui
+git commit --amend  --signoff
 
+ungit # best git gui
