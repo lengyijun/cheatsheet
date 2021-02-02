@@ -1,0 +1,60 @@
+# view keybinding
+SPC h b b
+
+# org: 增加一个并列的一级
+alt+enter
+
+# orgmode manual
+alt+x org-info
+
+# close split window
+space w c
+
+# toggle a line as heading
+# org-toggle
+space m h
+
+# toggle a line as item
+# org-toggle-item
+space m i
+
+# fold entire document
+shift tab
+
+# fold
+z c
+z o 
+z R
+z M
+
+# goto next heading
+g j
+g k
+
+# parent/child heading
+g h
+g l
+
+# promote/demote heading line
+alt left
+alt right
+
+# promote/demote current subtree
+alt shift left
+alt shift right
+
+# move current subtree up/down
+alt j
+alt k
+
+# insert time
+space i s time
+
+# switch TODO state
+space m t
+# mark as TODO
+space m t t
+
+# 添加日期
+# org schedule
+space m d s
