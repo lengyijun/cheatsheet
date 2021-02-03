@@ -2,3 +2,6 @@
 
 Object.keys({})        # object的key列表
 Object.value({})      # object的value列表
+
+# 打印调用递归栈
+console.trace();

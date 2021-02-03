@@ -39,3 +39,16 @@ multiset.erase(iterator)
 
 # delete all items
 multiset.erase(1)
+
+#include <bits/stdc++.h>
+
+std::sort(v.begin(), v.end(), [](int a,int b){return (a % 10) > (b % 10);}); 
+可能你还不太会使用 Lambda，基本形式如下：[](argument1,argument2,.....){//code}
+在 () 中传入参数，在 {} 中编写代码，[] 是一个捕获列表，可以指定外部作用域中，可以使用的局部变量：
+[] — 捕获列表为空，表示在 lambda 表达式中不能使用任何外部作用域的局部变量，只能使用传进去的参数。
+[=] — 表示按照值传递的方法捕获父作用域的所有变量。
+[&] — 表示按照引用传递的方法捕获父作用域的所有变量。
+[this] — 在成员函数中，按照值传递的方法捕获 this 指针。
+[a, &b] — 不建议直接使用 [=] 或 [&] 捕获所有变量，可以按需显式捕获，就是在 [] 指定变量名，[a] 表示值传递，[&b] 表示引用传递。
+
+int mi = std::min({x1, x2, x3, x4})

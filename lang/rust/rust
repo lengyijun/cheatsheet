@@ -180,3 +180,6 @@ println!("{}",x);
   let address = &42 as *const i32;
   println!("{:?}", address);
 }
+
+Box::new([0;10_000_000]) //不好的写法
+box[0;10_000_000] //好的写法

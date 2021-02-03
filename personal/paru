@@ -1,0 +1,23 @@
+# Interactively search and install <target>.
+paru <target>  
+
+# Alias for paru -Syu.
+paru 
+
+# Upgrade AUR packages.
+paru -Sua 
+
+# Print available AUR updates.
+paru -Qua 
+
+# Download the PKGBUILD and related files of <target>.
+paru -G <target> 
+
+# Print the PKGBUILD of <target>.
+paru -Gp <target> 
+
+# Print the AUR comments of <target>.
+paru -Gc <target> 
+
+# Generate the devel database for tracking *-git packages. This is only needed when you initially start using paru.
+paru --gendb 

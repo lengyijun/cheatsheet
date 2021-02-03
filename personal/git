@@ -39,6 +39,9 @@ git branch -f master HEAD~3
 git clone -b <branch> <url>
 git clone git@github.com:lengyijun/cheatsheet.git
 
+# clone a tag
+git clone --depth 1 --branch <tag_name> <repo_url>
+
 git remote add origin https://gitee.com/ggdG/hhh.git
 
 # 列举所有被git ignore的文件

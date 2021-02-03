@@ -3,3 +3,6 @@
 
 # change konsole theme
 konsoleprofile colors=NAME
+
+# kde image viewer
+gwenview
