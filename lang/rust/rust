@@ -183,3 +183,12 @@ println!("{}",x);
 
 Box::new([0;10_000_000]) //不好的写法
 box[0;10_000_000] //好的写法
+
+// no bound check
+// use simd
+fn loop_fast(a:&mut [i32]){
+  let a=&mut a[..1000];
+  for i in 0..1000{
+    a[i]=0;
+  }
+}
