@@ -53,11 +53,11 @@ ncdu
 
 # Bandwidth per process
 sudo iftop
+sudo bandwhich                    
 nethogs
-bmon
 
-# 网络流量查看
-bandwhich                    
+# not useful
+bmon  
 
 -------------------------------------------------------------------------------
 
