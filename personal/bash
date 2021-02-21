@@ -21,7 +21,6 @@ for f in $(ls -d /usr/lib/*); do sudo ln -s $f /usr/lib/x86_64-linux-gnu;done
 #把/usr/lib的文件都软连接到x86_64-linux-gnu里
 
 fc -2                        # 修改1条之前的命令
-stat <filename>              # 查看access、modify、change time
 look                         # 在/usr/share/dict/words中查找单词
 dmesg -wh                    # 打开dmesg的正确姿势
 rev                          # 反转字符串

@@ -67,6 +67,10 @@ dmesg | grep killed
 -------------------------------------------------------------------------------
 # other
 
+# 看inode里的信息
+# 比如access、modify、change time
+stat <filename>              
+
 # Check whether laptop is running on battery or cable
 # 1 = on ac, 0 = on bat
 cat /sys/class/power_supply/AC/online 

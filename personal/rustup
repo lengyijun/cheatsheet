@@ -1,3 +1,13 @@
 rustup toolchain list
 
 rustup update stable
+rustup update nightly
+
+# open doc of current version of rust
+# more info: https://rust-lang.github.io/rustup/concepts/components.html
+rustup component add rust-docs
+rustup doc
+
+# download a copy of code
+# ~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust
+rustup component add rust-src
