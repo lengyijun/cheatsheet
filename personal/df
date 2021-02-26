@@ -1,0 +1,6 @@
+# inspect inode usage
+df -i
+
+# To print free disk space in a human-readable format:
+df -hT
+

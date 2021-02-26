@@ -32,3 +32,11 @@ cargo install --path .
 # call me when finished
 cargo build --release && \
 	echo Back to work | espeak
+
+# view expand macro
+cargo expand
+rustc -Z unstable-options --pretty=expanded temp.rs
+
+# test的output
+cargo test -- --nocapture
+

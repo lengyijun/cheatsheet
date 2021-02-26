@@ -50,9 +50,14 @@ tidy                         # format html/xml
 fx                           # interactive json viewer
 whence                       # similar to which
                              # which = whence -c
-dia                          # processon
 nmtui                        # 终端连网络
 scrcpy                       # 屏幕连手机
 viu                          # terminal view image
 parcellite                   # clipboard manager
 flameshot                    # 截图软件
+usb-imager                   # 刻启动u盘
+
+# processon
+dia                          
+smartdraw
+

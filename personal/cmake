@@ -1,0 +1,8 @@
+# 直接设置变量的值
+set(SRC_LIST main.cpp test.cpp)
+add_executable(demo ${SRC_LIST})
+
+# 追加设置变量的值
+set(SRC_LIST main.cpp)
+set(SRC_LIST ${SRC_LIST} test.cpp)
+add_executable(demo ${SRC_LIST})

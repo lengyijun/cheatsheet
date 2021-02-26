@@ -7,6 +7,7 @@ std::sort(std::begin(container), std::end(container),
     return lhs.first < rhs.first;
 });
 
+//priority_queue默认是最大值在前面
 //最小堆
 priority_queue<int, vector<int>, greater<int> > q;
 
@@ -52,3 +53,19 @@ std::sort(v.begin(), v.end(), [](int a,int b){return (a % 10) > (b % 10);});
 [a, &b] — 不建议直接使用 [=] 或 [&] 捕获所有变量，可以按需显式捕获，就是在 [] 指定变量名，[a] 表示值传递，[&b] 表示引用传递。
 
 int mi = std::min({x1, x2, x3, x4})
+
+set,map: 红黑树
+unordered_map: hash table
+所以set和map的key可以是vector
+而unordered_map的key不能是vector
+
+//ok
+set<vector<int> > s;
+map<vector<int>,int> mp;
+
+//error
+unordered_map<vector<int>,int> mp;
+
+memcpy,memmove
+在遇到src和dest重叠的情况下，memcpy不能保证正确性，memmove可以保证正确性
+
