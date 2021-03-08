@@ -192,3 +192,10 @@ fn loop_fast(a:&mut [i32]){
     a[i]=0;
   }
 }
+
+//static 的例子
+struct S {
+    a: &'static [u8],
+}
+let s = S { a: &[][..] };
+
