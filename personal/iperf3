@@ -1,0 +1,8 @@
+# open server
+iperf3 -s
+iperf3 -s -p <port>
+
+# 百兆
+iperf3 -c 58.196.135.54 -b 100M -n 100G
+iperf3 -c 58.196.135.54 -b 100M -n 100G -p <port>
+
