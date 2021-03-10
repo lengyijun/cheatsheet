@@ -199,3 +199,20 @@ struct S {
 }
 let s = S { a: &[][..] };
 
+trait A {
+    fn get(&mut self, name: &str) -> &mut Vec<i32>;
+}
+
+struct B(HashMap<String, Vec<i32>>);
+
+impl A for B {
+   fn get(&mut self, name: &str) -> &mut Vec<i32> {
+        if self.0.contains_key(name) {
+            return match self.0.get_mut(name) {
+                Some(items) => items,
+                None => unreachable!(),
+            };
+        }
+        self.0.entry(name.to_string()).or_default()
+    }
+}
