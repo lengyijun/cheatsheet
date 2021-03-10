@@ -56,6 +56,10 @@ sudo iftop
 sudo bandwhich                    
 nethogs
 
+# better ping
+# 测试抖动（jitter） 
+mtr
+
 # not useful
 bmon  
 
