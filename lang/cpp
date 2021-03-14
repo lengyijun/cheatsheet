@@ -69,3 +69,21 @@ unordered_map<vector<int>,int> mp;
 memcpy,memmove
 在遇到src和dest重叠的情况下，memcpy不能保证正确性，memmove可以保证正确性
 
+
+// priority_queue 自定义方法1
+struct Node{
+    int x, y;
+    Node(int a=0, int b=0):
+        x(a),y(b){}
+};
+bool operator<(Node a, Node b){//返回true时，说明a的优先级低于b
+    //x值较大的Node优先级低（x小的Node排在队前）
+    //x相等时，y大的优先级低（y小的Node排在队前）
+    if( a.x== b.x ) return a.y> b.y;
+    return a.x> b.x;
+}
+priority_queue<Node> pq;
+
+// priority_queue 自定义方法2
+auto comp=[](ListNode *a, ListNode *b) {return a->vl > b->val;};
+priority_queue<ListNode*, vector<ListNode*>, decltype(comp)> q(comp);
