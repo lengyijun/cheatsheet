@@ -1,5 +1,10 @@
 # To list every process on the system:
 ps aux
+ps -ef
+
+# 显示thread的name
+# rust中，可以给线程名字
+ps -e -T
 
 # To list a process tree:
 ps axjf
