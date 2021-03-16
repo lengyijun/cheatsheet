@@ -13,3 +13,8 @@ ssh -f -N -L 10.1.1.3:8888:127.0.0.1:8888 127.0.0.1
 
 # 把 80 绑定到 8080 端口
 sudo ssh  -L 80:127.0.0.1:8080 -N  sjtu-lyj@127.0.0.1
+
+/etc/ssh/sshd_config 
+useDNS no
+不需要使用DNS
+
