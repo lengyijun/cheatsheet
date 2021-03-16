@@ -24,6 +24,11 @@ for ch in 'a'..='z' {
   print!("{}",ch);
 }
 
+# iterator on string
+for c in my_str.chars() {
+    // do something with `c`
+}
+
 println!("{:#x?}", region);  //最佳写法 http://dtrace.org/blogs/bmc/2020/10/11/rust-after-the-honeymoon/
 println!("{}", 1); // 默认用法,打印Display
 println!("{:o}", 9); // 八进制
@@ -42,16 +47,6 @@ format!("{}{}","hello","world")
 # 打印长数组
 let a = [0; 33];
 println!("{:?}", &a[..]);
-
-# string add string
-let mut s1 = "Hello,".to_string();
-let s2 = "world".to_string();
-s1 += &s2;
-
-# iterator on string
-for c in my_str.chars() {
-    // do something with `c`
-}
 
 if let Some([b'@', filename @ ..]) = Some(b"@abc123") {
   println!("filename {:?}", filename);
@@ -180,9 +175,22 @@ println!("{}",x);
   let address = &42 as *const i32;
   println!("{:?}", address);
 }
+#[macro_export]
+macro_rules! getAddress {
+($a:expr) => {{
+let y = format!("{:p}", $a);
+let address = y.trim_start_matches("0x");
+let z: u64 = u64::from_str_radix(&address, 16).unwrap();
+z
+}};
+}
 
-Box::new([0;10_000_000]) //不好的写法
-box[0;10_000_000] //好的写法
+// 不好的写法
+// 因为会先分配到栈上
+Box::new([0;10_000_000]) 
+// 好的写法
+// 会直接分配到堆上
+box[0;10_000_000] 
 
 // no bound check
 // use simd
