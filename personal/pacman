@@ -4,6 +4,9 @@ tags: [ packaging ]
 
 https://wiki.archlinux.org/index.php/Pacman/Rosetta#Verification_and_repair
 
+# To get information about package:
+sudo pacman -Si <package>...
+
 # apt update && apt upgrade && apt dist-upgrade
 sudo pacman -Syu
 
@@ -23,15 +26,8 @@ sudo pacman -R <package>...
 # apt remove
 sudo pacman -Rs <package>...
 
-# OUT-OF-DATE
-# To update the local package base and upgrade all out-of-date packages:
-sudo pacman -Suy
-
 # To uninstall a package and its depedencies, removing all new orphans:
 sudo pacman -Rcs <package>...
-
-# To get information about package:
-sudo pacman -Si <package>...
 
 # To install a package from builded package file (.tar.xz):
 sudo pacman -U <file>
@@ -51,7 +47,6 @@ sudo pacman -Qdt
 # To list installed packages sorted by size
 sudo pacman -Qq | pacman -Qi - | egrep '(Size\s+:|Name\s+:[^s])' | sed -E 's/ ([KM])iB/\1/' | sed -z 's/\nInstalled/ /g' | perl -pe 's/(Name|Size) *: //g' | column -t | sort -hk2 -r | cat -n | tac
 
-
 # You can't directly install packages from the Arch User Database (AUR) with pacman.
 # You need yaourt to perform that. But considering yaourt itself is in the AUR, here is how to build a package from its tarball.
 # Installing a package from AUR is a relatively simple process:
@@ -67,3 +62,8 @@ cd "$pkgname"
 makepkg -s
 # Install
 sudo pacman -U <package file (.pkg.tar.xz)>
+
+# OUT-OF-DATE
+# To update the local package base and upgrade all out-of-date packages:
+sudo pacman -Suy
+

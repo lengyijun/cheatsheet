@@ -58,3 +58,6 @@ space m t t
 # 添加日期
 # org schedule
 space m d s
+
+# 切换同目录的文件
+space ,

@@ -40,3 +40,8 @@ rustc -Z unstable-options --pretty=expanded temp.rs
 # test的output
 cargo test -- --nocapture
 
+# `llvm-bc`, `asm`, `llvm-ir`, `mir`, `obj`, `metadata`, `link`, `dep-info`
+rustc --emit mir foo.rs
+
+cargo rustc -- -Z unpretty=hir-tree
+

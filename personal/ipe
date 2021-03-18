@@ -9,3 +9,12 @@ ctrl+8
 
 # down
 ctrl+2
+
+# switch profile
+ctrl + shift + s
+# default location
+~/.ipe/***.isy
+
+# choose page
+j
+

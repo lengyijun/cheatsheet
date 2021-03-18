@@ -1,0 +1,7 @@
+# pdf to jpg
+vips copy a.pdf a.jpg
+vips copy somefile.pdf[dpi=600] somefile.jpg
+vips copy somefile.pdf[dpi=600,page=12] somefile.jpg
+
+# Or render five pages starting from page three like this:
+vips copy somefile.pdf[dpi=600,page=3,n=5] somefile.jpg
