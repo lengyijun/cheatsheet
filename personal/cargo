@@ -42,6 +42,11 @@ cargo test -- --nocapture
 
 # `llvm-bc`, `asm`, `llvm-ir`, `mir`, `obj`, `metadata`, `link`, `dep-info`
 rustc --emit mir foo.rs
+cargo rustc -- --emit mir
+ls target/release/deps/<crate_name>-<hash>.mir
+
+RUSTFLAGS="--emit asm" cargo build
 
 cargo rustc -- -Z unpretty=hir-tree
+
 
