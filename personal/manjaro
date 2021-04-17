@@ -4,3 +4,7 @@ pavucontrol
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
+
+# dolphin 中 ssh 文件位置
+/home/lyj/.local/share/remoteview/Everton.desktop
+
