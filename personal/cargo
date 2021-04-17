@@ -49,4 +49,5 @@ RUSTFLAGS="--emit asm" cargo build
 
 cargo rustc -- -Z unpretty=hir-tree
 
+cargo miri test
 

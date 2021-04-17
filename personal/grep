@@ -1,6 +1,10 @@
 # 匹配的上下5行
 grep -5 'pattern'            
 
+# 查找不包含 foo 的文件
+# grep has the -L (or --files-without-match) option
+grep -L "foo" *
+
 # To search a file for a pattern:
 grep <pattern> <file>
 

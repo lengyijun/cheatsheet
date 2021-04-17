@@ -1,11 +1,7 @@
+#include <bits/stdc++.h>
+
 #include<limits.h>
 int a=INT_MIN
-
-# custom compare
-std::sort(std::begin(container), std::end(container),
-          [] (const auto& lhs, const auto& rhs) {
-    return lhs.first < rhs.first;
-});
 
 //priority_queue默认是最大值在前面
 //最小堆
@@ -36,12 +32,18 @@ upper_bound
 upper_bound(a,a+n,x)-lower_bound(a,a+n,x)
 
 # delete one item
-multiset.erase(iterator)
+multiset.erase(multiset.find(1));
 
 # delete all items
-multiset.erase(1)
+multiset.erase(1);
 
-#include <bits/stdc++.h>
+multiset 可重复的二叉树,快速访问最小值和最大值
+
+# 最小值
+multiset.begin()
+# 最大值
+multiset.rbegin()
+
 
 std::sort(v.begin(), v.end(), [](int a,int b){return (a % 10) > (b % 10);}); 
 可能你还不太会使用 Lambda，基本形式如下：[](argument1,argument2,.....){//code}
@@ -87,3 +89,10 @@ priority_queue<Node> pq;
 // priority_queue 自定义方法2
 auto comp=[](ListNode *a, ListNode *b) {return a->vl > b->val;};
 priority_queue<ListNode*, vector<ListNode*>, decltype(comp)> q(comp);
+
+string s="1 2 3";
+stringsteam ss(s);
+string temp;
+while(ss>>temp){
+  cout<<temp<<endl;
+}

@@ -1,0 +1,9 @@
+ ping 10.0.0.1 | ts
+
+ The -s option will show incremental timestamps from the start of the program or action. 
+ In other words it will show the time since you started the program
+ ping 10.0.0.1 | ts -s
+
+ The -i options works a little differently. It shows the time since the last timestamp.
+ ping 10.0.0.1 | ts -i
+
