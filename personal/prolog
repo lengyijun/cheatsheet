@@ -1,0 +1,40 @@
+# 小写字母开头的字符串，就是常量；大写字母开头的字符串，就是变量。
+
+write("Hello, world").
+write('Hello,'), nl, write('world').
+
+friend(jack, peter).
+
+# 如果括号里面只有一个参数，就表示对象拥有该属性，比如 jack 是男性，写成
+male(jack).
+
+friend(X, Y) :- friend(Y,X).
+
+# 如果一条规则取决于多个条件同时为true，则条件之间使用逗号分隔。
+mother(X, Y) :- child(Y,X), female(X).
+
+# 如果一条规则取决于某个条件为false，则在条件之前加上\+表示否定。
+onesidelove(X, Y) :- loves(X, Y), \+ loves(Y,X).
+
+
+# 加载hello.pl
+[hello].
+
+listing()
+listing(friend).
+
+% 8-queen 里的规则
+cap(R,_,R,_). %captures on the same row.
+cap(_,C,_,C). %captures on the same col.
+cap(R1,C1, R2,C2) :- R1-C1 =:= R2-C2. %left diag.
+cap(R1,C1, R2,C2) :- R1+C1 =:= R2+C2. %right diag.
+
+% 类似于enum
+color(red).
+color(green).
+color(blue).
+
+% 数字也要enum
+col(1). col(2). col(3). col(4).
+col(5). col(6). col(7). col(8).
+

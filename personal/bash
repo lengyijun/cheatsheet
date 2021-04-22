@@ -61,3 +61,8 @@ usb-imager                   # 刻启动u盘
 dia                          
 smartdraw
 
+
+# nodejs version manager
+# similar to nvm
+# written in Rust
+fnm 

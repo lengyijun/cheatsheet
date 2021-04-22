@@ -1,3 +1,6 @@
+# view a pem
+openssl x509 -in a.pem -text
+
 # To create a 2048-bit private key:
 openssl genrsa -out server.key 2048
 

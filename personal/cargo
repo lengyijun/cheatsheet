@@ -51,3 +51,15 @@ cargo rustc -- -Z unpretty=hir-tree
 
 cargo miri test
 
+# 生成mir对应的.dot 文件
+# 然后转成图片看
+cargo rustc --release  -- -Z dump-mir=all -Z dump-mir-dataflow
+
+
+rustc --print target-list
+
+cargo  rustc  -- -Zpolonius
+
+# view desugared code
+# cargo-inspect
+rustc +nightly -Zunpretty=hir file.rs

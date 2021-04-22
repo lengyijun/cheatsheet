@@ -96,3 +96,10 @@ string temp;
 while(ss>>temp){
   cout<<temp<<endl;
 }
+
+std::cout.precision(1);
+cout<< std::fixed;
+cout<<hdp[0][0][0]<<" "<<tdp[0][0][0]<<endl;
+
+cout<<hex<<42<<endl;        // 输出 16 进制
+cout<<oct<<42<<endl;        // 输出 8 进制

@@ -65,3 +65,7 @@ cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
 # manjaro
 /etc/pacman.d/mirrorlist
+
+# firefox bookmark location
+~/.mozilla/firefox
+search places.sqlite
