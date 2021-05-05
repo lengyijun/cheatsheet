@@ -19,6 +19,7 @@ onesidelove(X, Y) :- loves(X, Y), \+ loves(Y,X).
 
 # 加载hello.pl
 [hello].
+swipl hello.pl
 
 listing()
 listing(friend).
@@ -37,4 +38,26 @@ color(blue).
 % 数字也要enum
 col(1). col(2). col(3). col(4).
 col(5). col(6). col(7). col(8).
+
+# 数字用 =:= 最好
+1 =:= 2-1.
+1 is 2-1.
+1 = 1. /* don't use this */
+
+or(A,_):- A.
+or(_,A):- A.
+or(true,true).
+# 会打印两个true,因为有两条规则让他true.
+
+
+# debug
+swipl-win
+点击graphic debug
+trace.
+
+?- member(a,[a]).
+true.
+
+?- member(c,[a]).
+false.
 

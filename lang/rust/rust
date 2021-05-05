@@ -9,6 +9,7 @@ println!("{:?}", sy_time.elapsed().unwrap().as_millis() );
 
 //环境变量
 &env::var( "OMP_NUM_THREADS" ).unwrap();
+let home=env!("HOME");
 
 if let Some(ref p) = self.path {}
           
@@ -224,3 +225,11 @@ impl A for B {
         self.0.entry(name.to_string()).or_default()
     }
 }
+
+let b:Rc<str>="hello".into();
+
+#![deny(clippy::all)]
+#![deny(clippy::pedantic)]
+#![deny(clippy::restriction)]
+打开clippy的所有lint
+

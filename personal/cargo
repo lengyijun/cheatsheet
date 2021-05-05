@@ -4,7 +4,6 @@ cargo b  --examples
 
 cargo run --example jiqian
 
-cargo doc
 cargo doc --open
 
 # 下载一个crate的源码
@@ -23,6 +22,7 @@ cargo vendor
 
 # check
 cargo clippy
+cargo clippy -V
 
 # expand macro
 cargo expand
@@ -40,6 +40,11 @@ rustc -Z unstable-options --pretty=expanded temp.rs
 # test的output
 cargo test -- --nocapture
 
+# view desugared code
+# cargo-inspect
+rustc +nightly -Zunpretty=hir main.rs
+cargo rustc -- -Z unpretty=hir-tree
+
 # `llvm-bc`, `asm`, `llvm-ir`, `mir`, `obj`, `metadata`, `link`, `dep-info`
 rustc --emit mir foo.rs
 cargo rustc -- --emit mir
@@ -47,19 +52,18 @@ ls target/release/deps/<crate_name>-<hash>.mir
 
 RUSTFLAGS="--emit asm" cargo build
 
-cargo rustc -- -Z unpretty=hir-tree
-
-cargo miri test
-
 # 生成mir对应的.dot 文件
 # 然后转成图片看
 cargo rustc --release  -- -Z dump-mir=all -Z dump-mir-dataflow
 
+# 内存泄露分析
+cargo miri test
 
 rustc --print target-list
 
+# 更好的borrow check
 cargo  rustc  -- -Zpolonius
 
-# view desugared code
-# cargo-inspect
-rustc +nightly -Zunpretty=hir file.rs
+# polonius 里测试的生成方法
+rustc -Znll-facts -Zpolonius issue-47680.rs
+

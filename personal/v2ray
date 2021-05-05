@@ -1,0 +1,6 @@
+# generate random uuid
+v2ctl uuid
+
+# the domain is the same in the client_config.json
+v2ctl cert --domain=v2ray.com --domain=v2ray.cool --file=a
+
