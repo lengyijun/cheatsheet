@@ -67,3 +67,9 @@ cargo  rustc  -- -Zpolonius
 # polonius 里测试的生成方法
 rustc -Znll-facts -Zpolonius issue-47680.rs
 
+# view desugared code
+# cargo-inspect
+rustc +nightly -Zunpretty=hir file.rs
+
+rustc -Z help
+cargo -Z help
